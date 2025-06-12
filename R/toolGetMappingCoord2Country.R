@@ -14,7 +14,7 @@
 #'
 #' @export
 
-toolGetMappingCoord2Country <- function(pretty = FALSE, extended = FALSE, resolution = 0.5) {
+toolGetMappingCoord2Country <- function(pretty = FALSE, extended = FALSE, resolution = 0.25) {
   if (resolution == 0.25) {
     out <- toolGetMapping("mapCoords2CountryQuart.rds", where = "mstools")
   } else {

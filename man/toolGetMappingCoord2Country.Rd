@@ -4,7 +4,11 @@
 \alias{toolGetMappingCoord2Country}
 \title{toolGetMappingCoord2Country}
 \usage{
-toolGetMappingCoord2Country(pretty = FALSE, extended = FALSE, resolution = 0.5)
+toolGetMappingCoord2Country(
+  pretty = FALSE,
+  extended = FALSE,
+  resolution = 0.25
+)
 }
 \arguments{
 \item{pretty}{If TRUE, coordinate data is returned as numeric 'lon' and 'lat' columns}
