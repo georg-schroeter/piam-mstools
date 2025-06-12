@@ -4,6 +4,7 @@
 #' @param pretty If TRUE, coordinate data is returned as numeric 'lon' and 'lat' columns
 #' @param extended If TRUE, additional cells missing in the original 67420 data set will be
 #' returned as well.
+#' @param resolution If 0.25, mapping at quarterdegree resolution is returned
 #'
 #' @return data frame of mapping
 #'
@@ -13,11 +14,11 @@
 #'
 #' @export
 
-toolGetMappingCoord2Country <- function(pretty = FALSE, extended = FALSE) {
-  out <- toolGetMapping("mapCoords2Country.rds", where = "mstools")
-
-  if (!extended) {
-    out <- out[1:67420, ]
+toolGetMappingCoord2Country <- function(pretty = FALSE, extended = FALSE, resolution = 0.5) {
+  if (resolution == 0.25) {
+    out <- toolGetMapping("mapCoords2CountryQuart.rds", where = "mstools")
+  } else {
+    out <- toolGetMapping("mapCoords2Country.rds", where = "mstools")
   }
 
   if (pretty) {

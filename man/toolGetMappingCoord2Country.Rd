@@ -4,13 +4,15 @@
 \alias{toolGetMappingCoord2Country}
 \title{toolGetMappingCoord2Country}
 \usage{
-toolGetMappingCoord2Country(pretty = FALSE, extended = FALSE)
+toolGetMappingCoord2Country(pretty = FALSE, extended = FALSE, resolution = 0.5)
 }
 \arguments{
 \item{pretty}{If TRUE, coordinate data is returned as numeric 'lon' and 'lat' columns}
 
 \item{extended}{If TRUE, additional cells missing in the original 67420 data set will be
 returned as well.}
+
+\item{resolution}{If 0.25, mapping at quarterdegree resolution is returned}
 }
 \value{
 data frame of mapping
